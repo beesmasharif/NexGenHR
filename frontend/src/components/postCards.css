@@ -3,9 +3,30 @@
   border-radius: 12px;
   padding: 20px;
   margin-bottom: 20px;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:nth-child(1) {
+  background-color: #fae9eb;
+}
+
+.job-card:nth-child(2) {
+  background-color: #e7eff2;
+}
+
+.job-card:nth-child(3) {
+  background-color: #eaf1df;
+
+}
+
+.job-card:nth-child(4) {
+  background-color: #f9f5f2;
+}
+
+.job-card:nth-child(5) {
+  background-color: #eee6f2;
 }
 
 .job-card:hover {
@@ -33,7 +54,7 @@
 }
 
 .apply-button, .choose-file-button {
-  background-color: #3498db;
+  background-color: #050606;
   color: white;
   margin-left: 5px;
   padding: 15px 20px;
@@ -66,4 +87,54 @@ label[for="cv-upload"] {
 
 label[for="cv-upload"]:hover {
   background-color: #27ae60;
+}
+.job-posting-page {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  overflow: hidden;
+}
+
+.job-posting-page::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 60%;
+  width: 300px;
+  height: 300px;
+  background: rgba(163, 226, 255, 0.2);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.job-form-card {
+  position: relative;
+  z-index: 1;
+}
+.post-cards-page {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(to left, #f9fbff, #f0f4f8);
+  padding: 40px 20px;
+}
+
+.post-cards-page::before {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  width: 250px;
+  height: 250px;
+  background: rgba(173, 216, 230, 0.2);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.job-cards-wrapper {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: auto;
 }

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import './CreateJobPost.css'; // optional for styles
+import './CreateJobPost.css'; // Enable this if you add custom styles below
 
 const CreateJobPost = () => {
   const [form, setForm] = useState({
@@ -31,15 +31,17 @@ const CreateJobPost = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <h2>Create Job Post</h2>
-      <form onSubmit={handleSubmit}>
-        <input name="title" value={form.title} onChange={handleChange} className="form-control mb-2" placeholder="Job Title" required />
-        <input name="company" value={form.company} onChange={handleChange} className="form-control mb-2" placeholder="Company" required />
-        <input name="location" value={form.location} onChange={handleChange} className="form-control mb-2" placeholder="Location" required />
-        <textarea name="description" value={form.description} onChange={handleChange} className="form-control mb-3" placeholder="Description" />
-        <button type="submit" className="btn btn-primary">Create</button>
-      </form>
+    <div className="job-form-container">
+      <div className="job-form-card">
+        <h2 className="text-center mb-4">Create Job Post</h2>
+        <form onSubmit={handleSubmit}>
+          <input name="title" value={form.title} onChange={handleChange} className="form-control mb-3" placeholder="Job Title" required />
+          <input name="company" value={form.company} onChange={handleChange} className="form-control mb-3" placeholder="Company" required />
+          <input name="location" value={form.location} onChange={handleChange} className="form-control mb-3" placeholder="Location" required />
+          <textarea name="description" value={form.description} onChange={handleChange} className="form-control mb-4" placeholder="Description" rows="4" />
+          <button type="submit" className="btn btn-success w-100">Create</button>
+          </form>
+      </div>
     </div>
   );
 };

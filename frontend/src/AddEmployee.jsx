@@ -4,6 +4,8 @@ import Datepicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import axios from 'axios';
 import './AddEmployee.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faMagnifyingGlass, faNoteSticky } from '@fortawesome/free-solid-svg-icons';
 
 export default function AddEmployee() {
     const [firstName, setFirstName] = useState('');
@@ -54,12 +56,11 @@ export default function AddEmployee() {
     return (
         <div className='add-container'>
             <div className='add-container2'>
-                <div className='leftNav'>
-                    <Link to="/employee" className='leftNavBtn'>Home</Link>
-                    <Link className='leftNavBtn'>CV screening</Link>
-                    <Link className='leftNavBtn'>Job posting</Link>
-                    
-                </div>
+                <div className="leftNav">
+                     <Link to="/employee" className="leftNavBtn"><FontAwesomeIcon icon={faHouse} /> Home</Link>
+                     <Link className="leftNavBtn"><FontAwesomeIcon icon={faMagnifyingGlass} /> CV Screening</Link>
+                     <Link to="/admin/create-job" className="leftNavBtn"><FontAwesomeIcon icon={faNoteSticky} /> Job Posting</Link>
+                 </div>
             </div>
             <div className='add-container3'>
                 <div className='add-form'>

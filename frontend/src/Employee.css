@@ -7,7 +7,7 @@
 .employee-container2 {
     height: 100vh;
     width: 25%;
-    background-color: #212529;
+    background-color: #ffffff;
 }
 .leftNav {
     display: flex;
@@ -15,15 +15,23 @@
     margin-top: 100px;
 }
 .leftNavBtn {
-    height: 40px;
+    height: 60px;
     margin: 0;
     padding: 0 6px 0 6px;
     border: none;
     font-weight: 600;
     text-decoration: none;
-    text-align: center;
-    color: white;
+    text-align: left;
+    color: rgb(255, 255, 255);
 }
+.leftNavBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Soft translucent highlight */
+    color: #6e6b6b;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
 
 
 
@@ -43,6 +51,7 @@
     border-radius: 0.375rem;
     padding: 1.5rem;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+    height: 100vh;
 }
 
 
@@ -160,7 +169,7 @@ overflow: hidden;
 
 /* SEONDARY BUTTON VARIANT */
 .searchBtn {
-    color: #6c757d; /* Secondary text color */
+    color: #036827; /* Secondary text color */
     background-color: transparent; /* Transparent background */
     border: 1px solid #212529; /* Secondary color border */
     padding: 0.375rem 0.75rem; /* Padding inside the button */
@@ -171,15 +180,15 @@ overflow: hidden;
   }
   
   .searchBtn:hover {
-    color: #fff; /* White text on hover */
-    background-color: #6c757d; /* Secondary background color on hover */
-    border-color: #6c757d; /* Same border color */
+    color: #079228; /* White text on hover */
+    background-color: #067b13; /* Secondary background color on hover */
+    border-color: #078e22; /* Same border color */
   }
   
   .searchBtn:focus, 
   .searchBtn:active {
     outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.5); /* Focus ring similar to Bootstrap */
+    box-shadow: 0 0 0 0.2rem rgba(3, 127, 46, 0.5); /* Focus ring similar to Bootstrap */
   }
 
   
@@ -200,7 +209,7 @@ overflow: hidden;
     padding: 0.5rem 1rem; /* More padding for better usability */
     font-size: 1rem;
     color: #212529; /* Darker text color */
-    background-color: #ffffff; /* White background */
+    background-color: #178a07; /* White background */
     border: 1px solid #ced4da; /* Lighter border */
     border-radius: 0.25rem 0 0 0.25rem; /* Left rounded border */
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -212,7 +221,7 @@ overflow: hidden;
 }
 
 .searchBtn {
-    color: #ffffff;
+    color: #078526;
     background-color: #007bff;
     border: none; /* No border */
     padding: 0.5rem 1rem; /* Adjust padding */
@@ -232,12 +241,6 @@ overflow: hidden;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 }
 
-
-  
-
-
-
-
 .bg-color{
     background: rgb(39, 43, 47);
     
@@ -254,3 +257,27 @@ overflow: hidden;
     padding: 0;
 }
 
+.top-navbar {
+    background-color: #1d1f21;
+    color: white;
+    padding: 14px 30px;
+    margin: 0;
+    border: 0;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+  }
+  
+  
+  .navbar-title {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .leftNavBtn svg {
+    margin-right: 8px;
+  }
+  

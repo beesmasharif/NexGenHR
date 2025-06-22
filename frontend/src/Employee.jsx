@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import DataTable from 'react-data-table-component'; // Importing React Data Table Component
+import DataTable from 'react-data-table-component';
 import './Employee.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faTrashCan, faMoneyCheckDollar } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faMagnifyingGlass, faNoteSticky } from '@fortawesome/free-solid-svg-icons';
+
 
 function Employee() {
     const [employee, setEmployee] = useState([]);
@@ -48,7 +50,6 @@ function Employee() {
         }
     };
 
-    // Define columns for the DataTable
     const columns = [
         {
             name: 'ID',
@@ -92,55 +93,60 @@ function Employee() {
     ];
 
     return (
-        <div className="employee-container1">
-            <div className="employee-container2">
-                <div className="leftNav">
-                    <Link to="/employee" className="leftNavBtn">
-                        Home
-                    </Link>
-                    <Link className="leftNavBtn">CV Screening</Link>
-                    <Link to="/admin/create-job" className="leftNavBtn">Job Posting</Link>
-                </div>
-            </div>
+        <>
+            {/*  TOP NAVBAR */}
+            <nav className="top-navbar">
+                <h1 className="navbar-title">NexGenHR</h1>
+            </nav>
 
-            <div className="employee-container3">
-                <div className="data">
-                    <div className="custom">
-                        <Link to="/employee/add-employee" className="custom-btn custom-btn-success">
-                            Add +
-                        </Link>
-                        <div className="custom-input-group">
-                            <input
-                                type="text"
-                                className="search"
-                                placeholder="Search"
-                                aria-label="Search"
-                                value={searchTerm}
-                                onChange={(e) => setSearchTerm(e.target.value)}
-                            />
-                            <button
-                                className="btn searchBtn"
-                                type="button"
-                                onClick={handleSearch}
-                            >
-                                Search
-                            </button>
-                        </div>
+            <div className="employee-container1">
+                <div className="employee-container2">
+                    <div className="leftNav">
+                        <Link to="/employee" className="leftNavBtn"><FontAwesomeIcon icon={faHouse} /> Home</Link>
+                        <Link className="leftNavBtn"><FontAwesomeIcon icon={faMagnifyingGlass} /> CV Screening</Link>
+                        <Link to="/admin/create-job" className="leftNavBtn"><FontAwesomeIcon icon={faNoteSticky} /> Job Posting</Link>
                     </div>
+                </div>
 
-                    <DataTable
-                        columns={columns}
-                        data={employee}
-                        pagination // Enables pagination
-                        paginationPerPage={5} // Number of rows per page
-                        paginationRowsPerPageOptions={[5, 10, 15]} // Dropdown options for rows per page
-                        highlightOnHover // Adds a hover effect to rows
-                        striped // Adds striped row styling
-                        responsive // Makes the table responsive
-                    />
+                <div className="employee-container3">
+                    <div className="data">
+                        <div className="custom">
+                            <Link to="/employee/add-employee" className="custom-btn custom-btn-success">
+                                Add +
+                            </Link>
+                            <div className="custom-input-group">
+                                <input
+                                    type="text"
+                                    className="search"
+                                    placeholder="Search"
+                                    aria-label="Search"
+                                    value={searchTerm}
+                                    onChange={(e) => setSearchTerm(e.target.value)}
+                                />
+                                <button
+                                    className="btn searchBtn"
+                                    type="button"
+                                    onClick={handleSearch}
+                                >
+                                    Search
+                                </button>
+                            </div>
+                        </div>
+
+                        <DataTable
+                            columns={columns}
+                            data={employee}
+                            pagination
+                            paginationPerPage={5}
+                            paginationRowsPerPageOptions={[5, 10, 15]}
+                            highlightOnHover
+                            striped
+                            responsive
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 }
 

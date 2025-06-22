@@ -1,0 +1,27 @@
+.job-form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  padding: 20px;
+}
+
+.job-form-card {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.custom-green-btn {
+  background-color: #8ece9e;
+  color: white;
+  border: none;
+}
+
+.custom-green-btn:hover {
+  background-color: #86b591;
+}

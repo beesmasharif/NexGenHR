@@ -1,7 +1,7 @@
 
 .add-container {
     display: flex; /* Equivalent to d-flex */
-    height: 150vh; /* Equivalent to vh-150 (150% of the viewport height) */
+    height: 160vh; /* Equivalent to vh-150 (150% of the viewport height) */
     background-color: #f8f9fa; /* Equivalent to bg-light (light gray color) */
     justify-content: center; /* Equivalent to justify-content-center */
     align-items: center; /* Equivalent to align-items-center */
@@ -10,7 +10,7 @@
 .add-container2 {
     width: 25%;
     height: 1150px;
-    background-color: #212529;
+    background-color: #ffffff;
 }
 
 .add-container3 {

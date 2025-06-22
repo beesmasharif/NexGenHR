@@ -48,7 +48,8 @@ export default function ShowEmployee() {
 
     return (
         <div className='show-container1'>
-            <div className='show-container2'>
+            <div className="show-container2">
+
                 <div className='leftNav'>
                     <Link to="/employee" className='leftNavBtn'>Home</Link>
                     <Link className='leftNavBtn'>CV screening</Link>
